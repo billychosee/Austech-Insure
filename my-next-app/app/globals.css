@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #ededed;
+  }
+}
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  src: url('/fonts/BricolageGrotesque-Regular-BF648bd57899c78.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+@keyframes fadeInBounceDiagonalLeft {
+  0% {
+    transform: translate(-50px, 50px);
+    opacity: 0; /* Start invisible */
+  }
+  40% {
+    transform: translate(10px, -20px);
+    opacity: 1; /* Fully visible */
+  }
+  60% {
+    transform: translate(-5px, 10px);
+    opacity: 1; /* Stay fully visible */
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1; /* End fully visible */
+  }
+}
+
+@keyframes fadeInBounceDiagonalRight {
+  0% {
+    transform: translate(50px, -50px);
+    opacity: 0; /* Start invisible */
+  }
+  40% {
+    transform: translate(-10px, 20px);
+    opacity: 1; /* Fully visible */
+  }
+  60% {
+    transform: translate(5px, -10px);
+    opacity: 1; /* Stay fully visible */
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1; /* End fully visible */
+  }
+}
+
+.bounce-in-diagonal-left {
+  @apply animate-[fadeInBounceDiagonalLeft_1.25s_ease-out_forwards];
+}
+
+.bounce-in-diagonal-right {
+  @apply animate-[fadeInBounceDiagonalRight_1.25s_ease-out_forwards];
+}
+
