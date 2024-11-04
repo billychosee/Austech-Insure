@@ -175,7 +175,7 @@ function Home() {
     <div className="w-full md:w-3/5 font-bricolage rounded-3xl border border-gray-200 bg-violet-700 text-white p-6 sm:p-8 md:p-10">
       <h1 className="text-4xl sm:text-5xl mb-6 sm:mb-8 md:mb-9">Customer Reviews</h1>
       <p className="text-lg sm:text-2xl md:text-3xl">
-        "You helped us streamline the insurance process to assist with risk mitigation, saving us time and headaches. We sleep well knowing we’re covered and our business is protected."
+      &quot;You helped us streamline the insurance process to assist with risk mitigation, saving us time and headaches. We sleep well knowing we’re covered and our business is protected.&quot;
       </p>
       <p className="text-lg sm:text-2xl pt-4 sm:pt-5">Peter Holden</p>
       <p className="text-lg sm:text-2xl">Head of Finance and Accounting, Truebill</p>
