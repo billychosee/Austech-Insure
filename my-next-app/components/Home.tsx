@@ -12,6 +12,7 @@ import QuoteCard from './Card';
 import Footer from './Footer';
 import Navbar from './Navbar';
 import Counter from './Counter'
+import ContactSection from './ContactSection';
 
 
 function Home() {
@@ -21,40 +22,48 @@ function Home() {
       <Navbar></Navbar>
 
 {/* Start Hero Section */}
-<div className="flex flex-col-reverse lg:flex-row items-center mx-5 md:mx-36 pt-5 space-y-5 lg:space-y-0">
-  <div className={`flex flex-col items-center lg:items-start justify-center space-y-6 lg:space-y-10 lg:w-1/2 bounce-in-diagonal-left`}>
-    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bricolage text-center lg:text-left">
+<div className="flex flex-col-reverse lg:flex-row items-center mx-5 md:mx-36 md:pt-5 lg:space-y-0 py-16 md:py-10">
+  {/* Text Section */}
+  <div className="flex flex-col items-center lg:items-start justify-center space-y-8 lg:space-y-10 lg:w-1/2 text-left">
+    <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-bricolage leading-tight">
       Insurance, tailored for your business.
     </h1>
-    <p className="text-lg sm:text-xl md:text-2xl text-center lg:text-left">
+    <p className="text-lg sm:text-xl md:text-2xl">
       Fast quotes. Custom coverage. Complete peace of mind.
     </p>
-    <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
-      <div className="text-white py-2 px-5 bg-violet-700 border rounded-full cursor-pointer hover:bg-violet-800 text-center sm:text-left">
-        Get a quote
-      </div>
-      <p className="text-violet-700 font-semibold text-center sm:text-left cursor-pointer">
-        Return to Your Quote
-      </p>
-    </div>
+    <div className="flex flex-col items-center space-y-4">
+  <button className="text-white py-3 px-36 md:px-7 w-full sm:w-auto bg-violet-700 border rounded-full cursor-pointer hover:bg-violet-800 text-center transition duration-300 ease-in-out transform hover:scale-105">
+    Get a quote
+  </button>
+  <p className="text-violet-700 font-semibold text-center cursor-pointer">
+    Return to Your Quote
+  </p>
+</div>
+
   </div>
-  <div className={`flex justify-center lg:justify-end w-full lg:w-1/2 py-4 lg:pb-10 bounce-in-diagonal-right`}>
-    <Image src={Tablet} alt="Tablet Girl" className="w-full sm:w-3/4 md:w-2/3 lg:w-auto" />
+  
+  {/* Image Section */}
+  <div className="flex justify-center lg:justify-end w-full lg:w-1/2 py-4 lg:pb-10 transition-transform duration-300 transform hover:scale-105">
+    <Image 
+      src={Tablet} 
+      alt="Tablet Girl" 
+      className="hidden lg:block w-full sm:w-3/4 md:w-2/3 lg:w-auto" 
+    />
   </div>
 </div>
 {/* End Hero Section */}
 
-
 {/* // Reliability Section Component */}
 <div className="flex flex-col justify-center items-center pt-10 md:pt-32 px-6 md:px-36 bg-gray-100 mt-5">
-  <h1 className="text-3xl md:text-6xl w-full md:w-4/5 text-center font-bricolage">
+  <h1 className="text-3xl md:text-5xl w-full md:w-4/5 text-center font-bricolage">
     Insurance Made Simple. Get back to business faster.
   </h1>
-  <p className="pt-5 text-center text-lg md:text-2xl w-full md:w-4/5">
+  <p className="pt-5 text-center text-lg md:text-xl w-full md:w-4/5">
     Austech Insure cuts through insurance complexity with custom quotes in minutes and hassle-free
     coverage tailored to your industry.
   </p>
-  <div className="flex flex-col md:flex-row pt-10 md:pt-16">
+
+  <div className="flex flex-col md:flex-row pt-10 md:pt-16 space-y-6 md:space-y-0 md:space-x-6">
     <FeatureCard
       imageSrc={Globe}
       altText="Globe"
@@ -77,11 +86,12 @@ function Home() {
       bgColor="bg-orange-300"
     />
   </div>
-  <div className="text-white py-2 px-4 md:px-5 bg-violet-700 hover:bg-violet-500 border border-violet-700 rounded-full mt-10 md:mt-16 transition duration-300 mb-16 md:mb-28 cursor-pointer">
-  Get a quote
-</div>
 
+  <button className="mt-10 md:mt-16 text-white py-3 px-5 bg-violet-700 hover:bg-violet-500 border border-violet-700 rounded-full transition duration-300 mb-16 md:mb-28 w-full md:w-auto">
+    Get a quote
+  </button>
 </div>
+{/* End Reliability Section */}
 
 
 
@@ -137,30 +147,20 @@ function Home() {
         </div>
 
       </div>
+
+      {/* End Quick Quotes Section */}
+      
       <div className='flex justify-center mt-16'>
         <button className="text-purple-600 font-semibold border border-purple-600 rounded-full px-4 py-2 transition duration-300 ease-in-out hover:bg-purple-600 hover:text-white hover:scale-105">View All Coverage </button>  
       </div>
 {/* 
       // Start Contact Us Section */}
-<div className="flex flex-col px-8 md:flex-row md:px-36 bg-gray-300 font-bricolage md:mt-32">
-  
-  <div className="pt-10 md:pt-32 md:w-1/2">
-    <h1 className="text-4xl md:text-6xl mb-6 md:mb-9">
-      Need help finding an insurance solution?
-    </h1>
-    <p className="text-xl md:text-3xl font-semibold mb-4 md:mb-2 md:w-4/5 text-darkGray">
-      Let us know your needs and we'll connect you with the right options.
-    </p>
-    <button className="text-white py-2 md:px-5 w-full md:w-1/4 bg-violet-700 hover:bg-violet-500 border border-violet-700 rounded-full mt-10 md:mt-16 transition duration-300 mb-10 md:mb-28">
-      Contact Us
-    </button>
-  </div>
-  
-  <div className="flex justify-center md:justify-end md:w-1/2 mt-6 md:mt-0">
-    <Image src={Contact} alt="Contact" className="w-3/4 md:w-4/5" />
-  </div>
-
-</div>
+<ContactSection
+        title="Need help finding an insurance solution?"
+        description="Let us know your needs and we'll connect you with the right options."
+        buttonText="Contact Us"
+        imageSrc={Contact} // Adjust this path to point to your image file
+      />
 {/* Content Section for Trust and Expertise */}
 <div className="px-4 sm:px-8 md:px-36 pt-20 md:pt-28">
   

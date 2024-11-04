@@ -1,56 +1,44 @@
 "use client"; // Ensure this is at the top
 
 import React, { useState } from 'react';
-import './Navbar.css'; // Ensure the path is correct
+import './Navbar.css'; // Include any custom CSS if needed
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between p-6 bg-darkGray text-white relative overflow-hidden">
+    <nav className="flex items-center justify-between p-6 bg-white shadow-md">
       {/* Logo */}
-      <div className="text-2xl font-bold transform transition-transform duration-500 hover:rotate-12 animate-bounce">
-        AUSTECH INSURE
-      </div>
+      <div className="text-2xl font-bold text-gray-800">AUSTECH INSURE</div>
 
-      {/* Links */}
-      <div className="hidden md:flex gap-8 text-lg">
-        <a href="#about" className="navbar-link">About Us</a>
-        <a href="#services" className="navbar-link">Services</a>
-        <a href="#claims" className="navbar-link">Claims</a>
-        <a href="#contact" className="navbar-link">Contact</a>
-      </div>
-
-      {/* Contact Button */}
-      <div className="hidden md:flex">
-        <a
-          href="#get-quote"
-          className="px-4 py-2 bg-purple-600 rounded hover:bg-purple-600 transition-all duration-300 transform hover:scale-105"
-        >
-          Get a Quote
-        </a>
+      {/* Desktop Menu Links */}
+      <div className="hidden md:flex gap-8 text-lg text-gray-700">
+        <a href="#about" className="hover:text-blue-600 transition">About Us</a>
+        <a href="#services" className="hover:text-blue-600 transition">Services</a>
+        <a href="#claims" className="hover:text-blue-600 transition">Claims</a>
+        <a href="#contact" className="hover:text-blue-600 transition">Contact</a>
       </div>
 
       {/* Mobile Menu Icon */}
       <div className="md:hidden flex items-center">
         <button
-          className="text-3xl focus:outline-none transform transition-transform duration-300 hover:rotate-180"
+          className="text-3xl text-gray-800 focus:outline-none"
           onClick={() => setShowMenu(!showMenu)}
         >
-          ☰
+          {showMenu ? '✖' : '☰'}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {showMenu && (
-        <div className="absolute top-16 left-0 w-full bg-darkGray p-6 flex flex-col gap-4 text-lg md:hidden">
-          <a href="#about" className="mobile-menu-link">About Us</a>
-          <a href="#services" className="mobile-menu-link">Services</a>
-          <a href="#claims" className="mobile-menu-link">Claims</a>
-          <a href="#contact" className="mobile-menu-link">Contact</a>
+        <div className="absolute top-16 left-0 w-full bg-white shadow-lg p-6 flex flex-col gap-4 md:hidden">
+          <a href="#about" className="text-gray-700 hover:text-blue-600 transition">About Us</a>
+          <a href="#services" className="text-gray-700 hover:text-blue-600 transition">Services</a>
+          <a href="#claims" className="text-gray-700 hover:text-blue-600 transition">Claims</a>
+          <a href="#contact" className="text-gray-700 hover:text-blue-600 transition">Contact</a>
           <a
             href="#get-quote"
-            className="bg-blue-600 rounded p-2 text-center hover:bg-blue-700 transition-all duration-200 transform hover:scale-105"
+            className="bg-blue-600 text-white rounded py-2 text-center hover:bg-blue-700 transition"
           >
             Get a Quote
           </a>
